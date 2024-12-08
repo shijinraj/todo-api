@@ -4,7 +4,23 @@
 
 - This is a simple REST-Service with the help of Java, Spring Boot and Maven.
 - The service allows managing Todos like you might know it from Todo list.
-- Solution is a robust, scalable Todo management application built using Spring Boot and Spring Data REST, demonstrating modern RESTful API design principles.
+- A Todo contains an arbitrary list of subtasks and is structured as follows:
+
+```json
+{
+  id [ mandatory ]
+  name [ mandatory ]
+  description
+   tasks: [
+      {
+      name [mandatory]
+      description
+      }
+   ]
+}
+```
+
+- A robust, scalable Todo management application built using Spring Boot and Spring Data REST, demonstrating modern RESTful API design principles.
 
 ## Project Requirements
 
@@ -21,11 +37,11 @@
 ### Architectural Choices
 
 1. **Framework Selection: Spring Data REST**
-    - Rapid API development
-    - Automatic REST endpoint generation
-    - Minimal boilerplate code
-    - Built-in HATEOAS support
-    - Easy integration with Spring ecosystem
+   - Rapid API development
+   - Automatic REST endpoint generation
+   - Minimal boilerplate code
+   - Built-in HATEOAS support
+   - Easy integration with Spring ecosystem
 
 ### Libraries and Dependencies
 
@@ -123,11 +139,11 @@ Spring Boot's Problem Detail specification provides standardized error responses
 
 ```json
 {
-  "type": "/errors/validation-failed",
-  "title": "Validation Error",
-  "status": 400,
-  "detail": "Todo title cannot be empty",
-  "instance": "/todos"
+   "type": "/errors/validation-failed",
+   "title": "Validation Error",
+   "status": 400,
+   "detail": "Todo title cannot be empty",
+   "instance": "/todos"
 }
 ```
 
