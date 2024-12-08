@@ -2,8 +2,7 @@
 
 ## Project Overview
 
-- This is a simple REST-Service with the help of Java, Spring Boot and Maven.
-- The service allows managing Todos like you might know it from Todo list.
+- The service allows managing Todos.
 - A Todo contains an arbitrary list of subtasks and is structured as follows:
 
 ```json
